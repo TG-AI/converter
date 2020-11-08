@@ -1,3 +1,4 @@
 aiohttp
-telegram.ext
+python-telegram-bot
 emoji
+requests
