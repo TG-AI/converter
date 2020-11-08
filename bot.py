@@ -10,8 +10,6 @@ from os import environ
 
 BOT_TOKEN = environ.get('BOT_TOKEN')
 
-CHANNEL = userge.getCLogger(__name__)
-
 def start(update, context):
 
     update.message.reply_text(
