@@ -6,7 +6,6 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import requests
 import json
 from os import environ
-from userge import Message
 
 BOT_TOKEN = environ.get('BOT_TOKEN')
 
