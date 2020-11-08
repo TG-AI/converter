@@ -69,7 +69,7 @@ def main():
     dp.add_handler(CommandHandler("start", start))
     dp.add_handler(CommandHandler("help", help_command))
 
-    dp.add_handler(CommandHandler(cr, cur_conv))
+    dp.add_handler(CommandHandler("cr", cur_conv))
     updater.start_polling()
 
     updater.idle()
