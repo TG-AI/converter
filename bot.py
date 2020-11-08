@@ -18,16 +18,13 @@ def help_command(update, context):
 
     update.message.reply_text('**Tutorial**\n\nHello This Bot Can Short Your Link\n\nFirst <b>YOU HAVE TO GET YOUR API TOKEN OF GPLINK FROM <\b>https://gplinks.in/member/tools/api \n\nAFTER THAT COPY THAT LINK FROM GPLINK TOOLS API\nIT WILL LOOK LIKE  https://gplinks.in/api?api=6a4cb74d70edd86803333333333a&\nSENT IT TO ME\n\nNOW YOU ARE DONE JUST SEND LINK TO THIS BOT \n\nNOW YOU CAN USE THIS BOT \nTHANKS FOR USING MY BOT \n\n')
 
-
-@userge.on_cmd("cr", about={
-    'header': "use this to convert currency & get exchange rate",
-    'description': "Convert currency & get exchange rates.",
-    'examples': "{tr}cr 1 BTC USD"})
-async def cur_conv(message: Message):
+    
+def cur_conv(update, context):
     """
     this function can get exchange rate results
     """
     if Config.CURRENCY_API is None:
+      async  
         await message.edit(
             "<code>Oops!!get the API from</code> "
             "<a href='https://free.currencyconverterapi.com'>HERE</a> "
