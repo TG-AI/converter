@@ -2,4 +2,4 @@ aiohttp
 python-telegram-bot
 emoji
 requests
-https://github.com/UsergeTeam/Userge/archive/master.zip
+
