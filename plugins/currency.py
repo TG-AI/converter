@@ -2,6 +2,7 @@
 from emoji import get_emoji_regexp
 
 import aiohttp
+import os
 from pyrogram import Filters, InlineKeyboardMarkup, InlineKeyboardButton
 import config
 import logging
