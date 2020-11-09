@@ -30,7 +30,7 @@ async def cur_conv(message, update, bot):
             parse_mode="html", del_in=0)
         return
       
-    curcon = bot.update.text.split()
+    curcon = update.text
 
     if len(curcon) == 3:
         amount, currency_to, currency_from = curcon
