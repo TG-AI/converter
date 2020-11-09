@@ -2,15 +2,15 @@
 from emoji import get_emoji_regexp
 
 import aiohttp
-
-from pyrogram import pyrogram, Message
+from pyrogram import Filters, InlineKeyboardMarkup, InlineKeyboardButton
 import config
+import logging
+logging.basicConfig(level=logging.DEBUG,
+                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
 
 
-@pyrogram.on_cmd("cr", about={
-    'header': "use this to convert currency & get exchange rate",
-    'description': "Convert currency & get exchange rates.",
-    'examples': "{tr}cr 1 BTC USD"})
+@pyrogram.Client.on_message(pyrogram.Filters.command(["cr", "cnv"]))
 async def cur_conv(message: Message):
     """
     this function can get exchange rate results
