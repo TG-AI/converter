@@ -25,8 +25,6 @@ def cur_conv(bot, update):
     """
     if Config.CURRENCY_API is None:
         update.message.reply_text("Error Please report it to my master")
-        disable_web_page_preview=True,
-        parse_mode="html", del_in=0)
         return
 
     filterinput = get_emoji_regexp().sub(u'', message.input_str)
