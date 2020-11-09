@@ -10,6 +10,10 @@ logging.basicConfig(level=logging.DEBUG,
 logger = logging.getLogger(__name__)
 
 
+import pyrogram
+logging.getLogger("pyrogram").setLevel(logging.WARNING)
+
+
 @pyrogram.Client.on_message(pyrogram.Filters.command(["cr", "cnv"]))
 async def cur_conv(message: Message):
     """
