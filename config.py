@@ -11,3 +11,4 @@ class Config(object):
     # Get these values from my.telegram.org
     AUTH_USERS = set(int(x) for x in os.environ.get("AUTH_USERS", "").split())
     DOWNLOAD_LOCATION = "./DOWNLOADS"
+    CURRENCY_API = os.environ.get("CURRENCY_API", "")
