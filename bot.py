@@ -14,8 +14,6 @@ else:
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
-
-    )
     app = pyrogram.Client(
         "AnyDLBot",
         bot_token=Config.TG_BOT_TOKEN,
