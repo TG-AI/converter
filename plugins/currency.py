@@ -3,7 +3,8 @@ from emoji import get_emoji_regexp
 
 import aiohttp
 
-from userge import userge, Message, Config
+from pyrogram import Message
+import config
 
 CHANNEL = userge.getCLogger(__name__)
 
