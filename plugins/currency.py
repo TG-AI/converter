@@ -13,13 +13,14 @@ logger = logging.getLogger(__name__)
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
+CURRENCY_API = os.environ.get("CURRENCY_API", None)
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["cr", "cnv"]))
 async def cur_conv(bot, update):
     """
     this function can get exchange rate results
     """
-    if config.CURRENCY_API is None:
+    if CURRENCY_API is None:
         await message.edit(
             "<code>Oops!!get the API from</code> "
             "<a href='https://free.currencyconverterapi.com'>HERE</a> "
