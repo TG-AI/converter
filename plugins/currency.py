@@ -3,7 +3,7 @@ from emoji import get_emoji_regexp
 
 import aiohttp
 
-from pyrogram import Message
+from pyrogram import pyrogram, Message
 import config
 
 
