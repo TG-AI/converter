@@ -3,7 +3,7 @@ from emoji import get_emoji_regexp
 
 import aiohttp
 import os
-from pyrogram import Filters, InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram import Filters, InlineKeyboardMarkup, InlineKeyboardButton, message
 import config
 import logging
 logging.basicConfig(level=logging.DEBUG,
@@ -29,6 +29,9 @@ async def cur_conv(message, update):
             disable_web_page_preview=True,
             parse_mode="html", del_in=0)
         return
+      
+    filterinput = get_emoji_regexp().sub(u'', message.input_str)
+    curcon = filterinput.upper().split()
 
     if len(curcon) == 3:
         amount, currency_to, currency_from = curcon
