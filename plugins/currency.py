@@ -22,7 +22,7 @@ async def cur_conv(message, update, bot):
     this function can get exchange rate results
     """
     if CURRENCY_API is None:
-        await message.edit(
+        await bot.edit_message_text(
             "<code>Oops!!get the API from</code> "
             "<a href='https://free.currencyconverterapi.com'>HERE</a> "
             "<code>& add it to Heroku config vars</code> (<code>CURRENCY_API</code>)",
