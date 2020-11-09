@@ -30,7 +30,7 @@ async def cur_conv(message, update):
             parse_mode="html", del_in=0)
         return
       
-    filterinput = get_emoji_regexp().sub(u'', message.str)
+    filterinput = get_emoji_regexp().sub(u'', message)
     curcon = filterinput.upper().split()
 
     if len(curcon) == 3:
