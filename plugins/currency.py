@@ -7,7 +7,7 @@ from pyrogram import Message
 import config
 
 
-@userge.on_cmd("cr", about={
+@pyrogram.on_cmd("cr", about={
     'header': "use this to convert currency & get exchange rate",
     'description': "Convert currency & get exchange rates.",
     'examples': "{tr}cr 1 BTC USD"})
