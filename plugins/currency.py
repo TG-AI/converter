@@ -19,7 +19,7 @@ async def cur_conv(bot, update):
     """
     this function can get exchange rate results
     """
-    if Config.CURRENCY_API is None:
+    if config.CURRENCY_API is None:
         await message.edit(
             "<code>Oops!!get the API from</code> "
             "<a href='https://free.currencyconverterapi.com'>HERE</a> "
