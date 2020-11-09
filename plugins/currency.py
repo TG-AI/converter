@@ -6,8 +6,6 @@ import aiohttp
 from pyrogram import Message
 import config
 
-CHANNEL = userge.getCLogger(__name__)
-
 
 @userge.on_cmd("cr", about={
     'header': "use this to convert currency & get exchange rate",
