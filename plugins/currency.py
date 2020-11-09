@@ -36,7 +36,7 @@ async def cur_conv(message, update):
     if len(curcon) == 3:
         amount, currency_to, currency_from = curcon
     else:
-        await message.edit("`something went wrong!! do .help cr`")
+        await bot.edit_message_text("`something went wrong!! do .help cr`")
         return
 
     if amount.isdigit():
