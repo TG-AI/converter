@@ -30,8 +30,7 @@ async def cur_conv(message, update, bot):
             parse_mode="html", del_in=0)
         return
       
-    filterinput = str(get_emoji_regexp().sub(u'', update.text))
-    curcon = filterinput.upper().split()
+    curcon = update.text.split()
 
     if len(curcon) == 3:
         amount, currency_to, currency_from = curcon
