@@ -16,7 +16,7 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 CURRENCY_API = os.environ.get("CURRENCY_API", None)
 
-@pyrogram.Client.on_message(pyrogram.Filters.command(["cr", "cnv"]))
+@pyrogram.Client.on_message(pyrogram.Filters.command(["cr", "cv"]))
 async def cur_conv(message, update):
     """
     this function can get exchange rate results
