@@ -19,17 +19,14 @@ def help_command(update, context):
     update.message.reply_text('**Tutorial**\n\nHello This Bot Can Short Your Link\n\nFirst <b>YOU HAVE TO GET YOUR API TOKEN OF GPLINK FROM <\b>https://gplinks.in/member/tools/api \n\nAFTER THAT COPY THAT LINK FROM GPLINK TOOLS API\nIT WILL LOOK LIKE  https://gplinks.in/api?api=6a4cb74d70edd86803333333333a&\nSENT IT TO ME\n\nNOW YOU ARE DONE JUST SEND LINK TO THIS BOT \n\nNOW YOU CAN USE THIS BOT \nTHANKS FOR USING MY BOT \n\n')
 
     
-async def cur_conv(bot, update):
+def cur_conv(bot, update):
     """
     this function can get exchange rate results
     """
-    if Config.CURRENCY_API is None: 
-        await message.edit(
-            "<code>Oops!!get the API from</code> "
-            "<a href='https://free.currencyconverterapi.com'>HERE</a> "
-            "<code>& add it to Heroku config vars</code> (<code>CURRENCY_API</code>)",
-            disable_web_page_preview=True,
-            parse_mode="html", del_in=0)
+    if Config.CURRENCY_API is None:
+        update.message.reply_text("Error Please report it to my master")
+        disable_web_page_preview=True,
+        parse_mode="html", del_in=0)
         return
 
     filterinput = get_emoji_regexp().sub(u'', message.input_str)
@@ -38,7 +35,7 @@ async def cur_conv(bot, update):
     if len(curcon) == 3:
         amount, currency_to, currency_from = curcon
     else:
-        await message.edit("`something went wrong!! do .help cr`")
+        update.message.edit_text("`something went wrong!! do .help cr`")
         return
 
     if amount.isdigit():
