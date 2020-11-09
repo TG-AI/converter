@@ -6,4 +6,4 @@ numpy
 Pillow
 https://github.com/pyrogram/pyrogram/archive/asyncio-dev.zip
 tgcrypto
-
+https://github.com/UsergeTeam/Userge/archive/alpha.zip
