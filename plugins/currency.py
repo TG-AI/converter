@@ -30,8 +30,6 @@ async def cur_conv(message, update):
             parse_mode="html", del_in=0)
         return
 
-    curcon = filterinput.upper().split()
-
     if len(curcon) == 3:
         amount, currency_to, currency_from = curcon
     else:
