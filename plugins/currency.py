@@ -47,12 +47,11 @@ async def cur_conv(message, update, bot):
         result = data[f'{currency_from}_{currency_to}']
         result = float(amount) / float(result)
         result = round(result, 5)
-        await message.edit(
+        await bot.edit_message_text(
             "**CURRENCY EXCHANGE RATE RESULT:**\n\n"
             f"`{amount}` **{currency_to}** = `{result}` **{currency_from}**")
-        await CHANNEL.log("`cr` command executed sucessfully")
 
     else:
-        await message.edit(
+        await bot.edit_message_text(
             r"`This seems to be some alien currency, which I can't convert right now.. (⊙_⊙;)`",
             del_in=0)
